@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Crimson+Pro:wght@300;400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream: #F7F3ED;
+  --parchment: #F0EAE0;
+  --gold: #B8974A;
+  --gold-light: #D4B06A;
+  --brown: #6B4C2A;
+  --ink: #1C1610;
+  --muted: #7A6A55;
+  --border: #D9CEB8;
+  --white: #FEFCF8;
+}
+
+body {
+  font-family: 'Crimson Pro', Georgia, serif;
+  background-color: var(--cream);
+  color: var(--ink);
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gold text-ink font-semibold px-6 py-3 tracking-wide transition-colors hover:bg-gold-light font-body;
+  }
+  .btn-outline {
+    @apply border border-gold text-gold px-6 py-3 tracking-wide transition-colors hover:bg-gold hover:text-ink font-body;
+  }
+  .btn-dark {
+    @apply bg-ink text-cream px-6 py-3 tracking-wide transition-colors hover:bg-brown font-body;
+  }
+  .input-field {
+    @apply border border-[#D9CEB8] px-3 py-2 font-body text-base bg-[#FEFCF8] text-ink outline-none focus:border-gold w-full transition-colors;
+  }
+  .section-title {
+    @apply font-serif text-3xl font-light text-ink;
+  }
+  .card {
+    @apply bg-[#FEFCF8] border border-[#D9CEB8];
+  }
+}
